@@ -37,9 +37,17 @@ addressBook.editDetails("Jane", "smith", {
   email: "sanket.patel@gmail.com",
 });
 
+// find number of contacts in addressbook before deletion
+console.log(addressBook.getContactCount());
+
 //  display contacts before deletion
 console.log("All Contacts:\n", addressBook.displayContacts());
+
 // delete contact
 addressBook.deleteContact("john", "Doe");
+
+// find number of contacts in addressbook after deletion
+console.log(addressBook.getContactCount());
+
 // display all contacts after deletion
 console.log("All Contacts:\n", addressBook.displayContacts());
