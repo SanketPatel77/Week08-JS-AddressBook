@@ -12,7 +12,6 @@ let contact1 = new Contact(
   "IL",
   "62704",
   "8425693000",
-  "9985012530",
   "john.doe@example.com"
 );
 let contact2 = new Contact(
@@ -23,7 +22,6 @@ let contact2 = new Contact(
   "MA",
   "02108",
   "9874589071",
-  "9876543210",
   "jane.smith@example.com"
 );
 
@@ -31,4 +29,11 @@ let contact2 = new Contact(
 addressBook.addContact(contact1);
 addressBook.addContact(contact2);
 
+// method to search by name and edit details
+addressBook.editDetails("Jane", "smith", {
+  firstName: "Sanket",
+  lastName: "patel",
+  phoneNumber: "8435216790",
+  email: "sanket.patel@gmail.com",
+});
 console.log("All Contacts:\n", addressBook.displayContacts());
