@@ -65,6 +65,20 @@ class AddressBook {
       ).length > 0
     );
   }
+
+  // method to search person in particular city
+  searchByCity(city) {
+    return this.contacts.filter(
+      (contact) => contact.city.toLowerCase() === city.toLowerCase()
+    );
+  }
+
+  // method to search person in particular state
+  searchByState(state) {
+    return this.contacts.filter(
+      (contact) => contact.state.toLowerCase() === state.toLowerCase()
+    );
+  }
 }
 // Exporting the AddressBook class
 export default AddressBook;

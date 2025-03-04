@@ -25,14 +25,26 @@ let contact2 = new Contact(
   "sanket@example.com"
 );
 
+let contact3 = new Contact(
+  "Uday",
+  "Kourav",
+  "219 Raj Samrat",
+  "Jabalpur",
+  "Bihar",
+  "462965",
+  "9879089071",
+  "uday@example.com"
+);
+
 // adding contact object to array
 addressBook.addContact(contact1);
 addressBook.addContact(contact2);
+addressBook.addContact(contact3);
 
 // method to search by name and edit details
-addressBook.editDetails("Jane", "smith", {
-  firstName: "Sanket",
-  lastName: "patel",
+addressBook.editDetails("Sanket", "patel", {
+  firstName: "Bhupendra",
+  lastName: "singh",
   phoneNumber: "8435216790",
   email: "sanket.patel@gmail.com",
 });
@@ -51,3 +63,9 @@ console.log(addressBook.getContactCount());
 
 // display all contacts after deletion
 console.log("All Contacts:\n", addressBook.displayContacts());
+
+// search the person by city name
+console.log("Person from city", addressBook.searchByCity("Lucknow"));
+
+// search the perosn by state name
+console.log("Person from state", addressBook.searchByState("MP"));
