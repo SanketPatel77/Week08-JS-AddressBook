@@ -35,17 +35,17 @@ class Contact {
   }
 
   validateName(name) {
-    let namePattern = /^[A-Z][a-zA-Z]{2,}$/;
+    let namePattern = /^[A-Z][a-zA-Z]{3,}$/;
     return namePattern.test(name);
   }
 
   validateAddress(value) {
-    let addressPattern = /^[A-Za-z0-9\s]{1,}$/;
+    let addressPattern = /^[A-Za-z0-9\s]{2,}$/;
     return addressPattern.test(value);
   }
 
   validateZip(zip) {
-    let zipPattern = /^\d{5}(-\d{4})?$/;
+    let zipPattern = /^\d{6}(-\d{4})?$/;
     return zipPattern.test(zip);
   }
 
@@ -59,6 +59,4 @@ class Contact {
     return emailPattern.test(email);
   }
 }
-
-// Exporting the Contact class for usage in other files
 export default Contact;

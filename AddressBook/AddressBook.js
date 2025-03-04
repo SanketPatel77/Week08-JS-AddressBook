@@ -8,6 +8,9 @@ class AddressBook {
 
   // method to add contact object in array
   addContact(contact) {
+    if (this.hasDuplicate(contact.firstName, contact.lastName)) {
+      throw new Error("Contact with this name already exists.");
+    }
     this.contacts.push(contact);
   }
 
@@ -47,8 +50,20 @@ class AddressBook {
     }
   }
 
+  // method to get count of contacts in addressbook
   getContactCount() {
     return this.contacts.reduce((count) => count + 1, 0);
+  }
+
+  // method to ensure find duplicate entry
+  hasDuplicate(firstName, lastName) {
+    return (
+      this.contacts.filter(
+        (contact) =>
+          contact.firstName.toLowerCase() === firstName.toLowerCase() &&
+          contact.lastName.toLowerCase() === lastName.toLowerCase()
+      ).length > 0
+    );
   }
 }
 // Exporting the AddressBook class

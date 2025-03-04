@@ -5,24 +5,24 @@ let addressBook = new AddressBook(); // reference of AddressBook class
 
 // create contacts
 let contact1 = new Contact(
-  "John",
-  "Doe",
+  "Ankit",
+  "Bhardwaj",
   "123 Main St",
-  "Springfield",
-  "IL",
-  "62704",
+  "Lucknow",
+  "UP",
+  "627004",
   "8425693000",
-  "john.doe@example.com"
+  "ankit@example.com"
 );
 let contact2 = new Contact(
-  "Jane",
-  "Smith",
+  "Sanket",
+  "Patel",
   "456 Elm St",
-  "Boston",
-  "MA",
-  "02108",
+  "Bhopal",
+  "MP",
+  "462041",
   "9874589071",
-  "jane.smith@example.com"
+  "sanket@example.com"
 );
 
 // adding contact object to array
@@ -44,7 +44,7 @@ console.log(addressBook.getContactCount());
 console.log("All Contacts:\n", addressBook.displayContacts());
 
 // delete contact
-addressBook.deleteContact("john", "Doe");
+addressBook.deleteContact("Sanket", "patel");
 
 // find number of contacts in addressbook after deletion
 console.log(addressBook.getContactCount());
