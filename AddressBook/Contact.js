@@ -1,5 +1,14 @@
 class Contact {
-  constructor(firstName, lastName, address, city, state, zip, phone, email) {
+  constructor(
+    firstName,
+    lastName,
+    address,
+    city,
+    state,
+    zip,
+    phoneNumber,
+    email
+  ) {
     if (!this.validateName(firstName)) throw new Error("Invalid First Name!");
     if (!this.validateName(lastName)) throw new Error("Invalid Last Name!");
     if (!this.validateAddress(address)) throw new Error("Invalid Address!");
@@ -41,7 +50,7 @@ class Contact {
   }
 
   validatePhoneNumber(phone) {
-    let phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    let phonePattern = /^\d{10}$/;
     return phonePattern.test(phone);
   }
 
