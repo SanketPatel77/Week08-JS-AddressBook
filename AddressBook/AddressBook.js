@@ -79,6 +79,20 @@ class AddressBook {
       (contact) => contact.state.toLowerCase() === state.toLowerCase()
     );
   }
+
+  //  View persons by city
+  viewByCity(city) {
+    return this.contacts
+      .filter((contact) => contact.city === city)
+      .map((contact) => `${contact.firstName} ${contact.lastName}`);
+  }
+
+  //  View persons by state
+  viewByState(state) {
+    return this.contacts
+      .filter((contact) => contact.state === state)
+      .map((contact) => `${contact.firstName} ${contact.lastName}`);
+  }
 }
 // Exporting the AddressBook class
 export default AddressBook;

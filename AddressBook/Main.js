@@ -69,3 +69,9 @@ console.log("Person from city", addressBook.searchByCity("Lucknow"));
 
 // search the perosn by state name
 console.log("Person from state", addressBook.searchByState("MP"));
+
+// view person by city name
+console.log("View by City :" + addressBook.viewByCity("Bhopal"));
+
+// view person by state name
+console.log("Vies by State :" + addressBook.viewByState("Bihar"));
