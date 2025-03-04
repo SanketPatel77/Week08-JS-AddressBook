@@ -50,3 +50,6 @@ class Contact {
     return emailPattern.test(email);
   }
 }
+
+// Exporting the Contact class for usage in other files
+export default Contact;
