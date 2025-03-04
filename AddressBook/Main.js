@@ -11,7 +11,7 @@ let contact1 = new Contact(
   "Springfield",
   "IL",
   "62704",
-  "123-456-7890",
+  "9985012530",
   "john.doe@example.com"
 );
 let contact2 = new Contact(
@@ -21,7 +21,7 @@ let contact2 = new Contact(
   "Boston",
   "MA",
   "02108",
-  "987-654-3210",
+  "9876543210",
   "jane.smith@example.com"
 );
 
