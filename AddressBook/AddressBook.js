@@ -31,6 +31,21 @@ class AddressBook {
       console.log("Contact not found.");
     }
   }
+
+  // method to search by name and delte contact form array
+  deleteContact(firstName, lastName) {
+    let index = this.contacts.findIndex(
+      (contact) =>
+        contact.firstName.toLowerCase() === firstName.toLowerCase() &&
+        contact.lastName.toLowerCase() === lastName.toLowerCase()
+    );
+    if (index !== -1) {
+      this.contacts.splice(index, 1);
+      console.log(`Contact ${firstName} ${lastName} deleted successfully`);
+    } else {
+      console.log("Contact not found");
+    }
+  }
 }
 // Exporting the AddressBook class
 export default AddressBook;

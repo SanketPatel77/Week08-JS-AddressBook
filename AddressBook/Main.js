@@ -36,4 +36,10 @@ addressBook.editDetails("Jane", "smith", {
   phoneNumber: "8435216790",
   email: "sanket.patel@gmail.com",
 });
+
+//  display contacts before deletion
+console.log("All Contacts:\n", addressBook.displayContacts());
+// delete contact
+addressBook.deleteContact("john", "Doe");
+// display all contacts after deletion
 console.log("All Contacts:\n", addressBook.displayContacts());
