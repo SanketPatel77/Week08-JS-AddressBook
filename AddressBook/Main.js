@@ -60,10 +60,10 @@ let contact5 = new Contact(
 
 // adding contact object to array
 addressBook.addContact(contact1);
-addressBook.addContact(contact2);
 addressBook.addContact(contact3);
-addressBook.addContact(contact4);
+addressBook.addContact(contact2);
 addressBook.addContact(contact5);
+addressBook.addContact(contact4);
 
 // // method to search by name and edit details
 // addressBook.editDetails("Sanket", "patel", {
@@ -105,3 +105,11 @@ console.log("Person from  same city", addressBook.getCountByCity("jabalpur"));
 
 // call method getCountByState
 console.log("Person from same state", addressBook.getCountByState("MP"));
+
+// print result before sorting
+console.log("Before sorting");
+console.log(addressBook.displayContacts());
+
+// print result after sorting
+console.log("After sorting");
+console.log(addressBook.sortByName());

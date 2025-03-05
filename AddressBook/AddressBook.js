@@ -107,6 +107,15 @@ class AddressBook {
       .filter((contact) => contact.state.toLowerCase() === state.toLowerCase())
       .reduce((count) => count + 1, 0);
   }
+
+  // method to sort contacts alphabatically by name
+  sortByName() {
+    return this.contacts
+      .slice()
+      .sort((a, b) =>
+        a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase())
+      );
+  }
 }
 // Exporting the AddressBook class
 export default AddressBook;

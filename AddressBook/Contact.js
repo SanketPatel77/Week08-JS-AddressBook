@@ -30,8 +30,13 @@ class Contact {
   }
 
   toString() {
-    return `Name: ${this.firstName} ${this.lastName}, Address: ${this.address}, City: ${this.city}, 
-    State: ${this.state}, Zip: ${this.zip}, Phone: ${this.phone}, Email: ${this.email}`;
+    return `Name: ${this.firstName} ${this.lastName}, 
+            Address: ${this.address},
+            City: ${this.city},
+            State: ${this.state},
+            Zip: ${this.zip},
+            Phone: ${this.phone}, 
+            Email: ${this.email}`;
   }
 
   validateName(name) {
