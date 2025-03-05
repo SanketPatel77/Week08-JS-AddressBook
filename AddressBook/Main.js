@@ -100,16 +100,28 @@ addressBook.addContact(contact4);
 // // view person by state name
 // console.log("Vies by State :" + addressBook.viewByState("Bihar"));
 
-// call method getCountByCity
-console.log("Person from  same city", addressBook.getCountByCity("jabalpur"));
+// // call method getCountByCity
+// console.log("Person from  same city", addressBook.getCountByCity("jabalpur"));
 
-// call method getCountByState
-console.log("Person from same state", addressBook.getCountByState("MP"));
+// // call method getCountByState
+// console.log("Person from same state", addressBook.getCountByState("MP"));
 
-// print result before sorting
-console.log("Before sorting");
-console.log(addressBook.displayContacts());
+// // print result before sorting by name
+// console.log("Before sorting");
+// console.log(addressBook.displayContacts());
 
-// print result after sorting
-console.log("After sorting");
-console.log(addressBook.sortByName());
+// // print result after sorting by name
+// console.log("After sorting");
+// console.log(addressBook.sortByName());
+
+// method call to sort by city
+console.log("Sort by city");
+console.log(addressBook.sortByCity());
+
+// method call to sort by State
+console.log("Sort by state");
+console.log(addressBook.sortByState());
+
+// method call to sort by zip
+console.log("Sort by zip");
+console.log(addressBook.sortByZip());

@@ -116,6 +116,21 @@ class AddressBook {
         a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase())
       );
   }
+
+  // method to sort contacts by city name
+  sortByCity() {
+    return this.contacts.slice().sort((a, b) => a.city.localeCompare(b.city));
+  }
+
+  // method to sort contacts by state name
+  sortByState() {
+    return this.contacts.slice().sort((a, b) => a.state.localeCompare(b.state));
+  }
+
+  // method to sort contacts by zip code
+  sortByZip() {
+    return this.contacts.slice().sort((a, b) => a.zip - b.zip);
+  }
 }
 // Exporting the AddressBook class
 export default AddressBook;
