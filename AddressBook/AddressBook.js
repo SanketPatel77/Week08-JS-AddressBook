@@ -83,7 +83,7 @@ class AddressBook {
   //  View persons by city
   viewByCity(city) {
     return this.contacts
-      .filter((contact) => contact.city === city)
+      .filter((contact) => contact.city.toLowerCase() === city.toLowerCase())
       .map((contact) => `${contact.firstName} ${contact.lastName}`);
   }
 
@@ -92,6 +92,20 @@ class AddressBook {
     return this.contacts
       .filter((contact) => contact.state === state)
       .map((contact) => `${contact.firstName} ${contact.lastName}`);
+  }
+
+  // method to get count of contacts in addressbook by city
+  getCountByCity(city) {
+    return this.contacts
+      .filter((contact) => contact.city.toLowerCase() === city.toLowerCase())
+      .reduce((count) => count + 1, 0);
+  }
+
+  // method to get count of contacts in addressbook by state
+  getCountByState(state) {
+    return this.contacts
+      .filter((contact) => contact.state.toLowerCase() === state.toLowerCase())
+      .reduce((count) => count + 1, 0);
   }
 }
 // Exporting the AddressBook class
